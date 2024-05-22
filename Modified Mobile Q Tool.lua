@@ -18,8 +18,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
     local prefix = "/e key "
     local newBolt = message:sub(#prefix + 1)
     if message:sub(1, #prefix) == prefix then
-        getgenv().bolt = newBolt
-        warn("Updated key to:", newBolt)
+        getgenv().bolt = newBolt:upper()
+        warn("Updated key to:", newBolt:upper())
     end
 end)
 
